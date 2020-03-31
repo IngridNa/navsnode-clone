@@ -6,7 +6,8 @@ const app = express();
 var mongoose = require('mongoose');
 
 //PERSISTÊNCIA
-mongoose.connect('mongodb://localhost/bdCrud', {useNewUrlParser:true});
+//mongoose.connect('mongodb://localhost/bdCrud', {useNewUrlParser:true});
+mongoose.connect('mongodb+srv://matheus:123@cluster0-pigl8.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser:true});
 
 //Configuração do server para usar body-parser
 app.use(bodyParser.urlencoded({ extended: true }));
