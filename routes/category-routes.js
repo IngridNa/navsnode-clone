@@ -8,9 +8,7 @@ router.post("/", function (req, res)
 {
     var categoria = new Categoria();
     categoria.nome = req.body.nome;
-    categoria.produto = req.body.produto;
-
-    produto.save(function (error) {
+    categoria.save(function (error) {
         if (error)
             res.send("Erro ao tentar salvar a categoria" + error);
 
@@ -27,7 +25,7 @@ router.get("/", function (req, res) {
             res.send(err);
 
         res.status(200).json({
-            message: 'Produtos retornados',
+            message: 'Categorias retornadas',
             categoria: cat
         });
     });
@@ -81,7 +79,7 @@ router.put("/:categoryId", function (req, res) {
             categoria.nome = req.body.nome;
             categoria.produto = req.body.produto;
 
-            produto.save(function(error){
+            categoria.save(function(error){
                 if(error)
                     res.send("Erro ao tentar atualizar categoria" + error);
                 

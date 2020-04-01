@@ -9,6 +9,7 @@ router.post("/", function (req, res) {
     produto.nome = req.body.nome;
     produto.preco = req.body.preco;
     produto.descricao = req.body.descricao;
+    produto.categoria = req.body.categoria;
 
     produto.save(function (error) {
         if (error)
