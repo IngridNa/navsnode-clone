@@ -9,10 +9,10 @@ router.post("/", userController.post);
 router.get("/", userController.getAll);
 
 //FindById
-router.get("/:productId", userController.getById);
+router.get("/:userId", userController.getById);
 
 //PUT
-router.put("/:productId", userController.put);
+router.put("/:userId", userController.put);
 
 //DELETE
 router.delete("/:productId", userController.delete);

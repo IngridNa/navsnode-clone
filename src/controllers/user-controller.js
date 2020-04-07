@@ -6,9 +6,11 @@ exports.post = async (req, res) => {
     try {
         await repository.post({
             nome: req.body.nome,
+            email: req.body.email,
+            password: req.body.password,
         });
         res.status(201).send({
-            message: 'Produto cadastrado com sucesso!'
+            message: 'Usuario cadastrado com sucesso!'
         });
     } catch (e) {
         console.log(e);
@@ -49,7 +51,7 @@ exports.put = async (req, res) => {
         const id = req.params.userId;
         var data = await repository.put(id, req.body);
         res.status(200).send({
-            message: "usuario atualizado com sucesso",
+            message: "Usuario atualizado com sucesso",
             dados: data
         });
 
